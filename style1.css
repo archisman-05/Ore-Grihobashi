@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(237, 152, 14);
+    font-family: Handjet, sans-serif;
+    color: rgb(20, 106, 152);
+    font-family: "Sevillana", cursive;
+    font-weight: 800;
+    background-image: url(home2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: yellow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(20, 106, 152);
+}
+
+nav ul li a:hover {
+    color: rgb(239, 165, 6);
+    font-size: 1.01rem;
+
+}
+
+.text {
+    font-size: 2rem;
+}
+.fp {
+    display: flex;
+    justify-content: space-around;
+    margin: 300px 0;
+    height:600px;
+}
+.leftp {
+    font-size: 2rem;
+    color: rgb(246, 138, 14);
+    margin: -240px;
+    padding-right: 190px;
+    position: absolute;
+}
+.rightp img{
+    margin: -200px;
+    height: 680px;
+    width: 1145px;
+    padding-left: 2rem;
+    position: absolute;
+}
+#element{
+    font-size: 4rem;
+    padding-left: 50px;
+}

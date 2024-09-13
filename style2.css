@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(237, 152, 14);
+    font-family: Handjet, sans-serif;
+    color: rgb(20, 106, 152);
+    font-family: "Sevillana", cursive;
+    font-weight: 800;
+    background-image: url(bookings.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: yellow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(20, 106, 152);
+}
+
+nav ul li a:hover {
+    color: rgb(239, 165, 6);
+    font-size: 1.01rem;
+
+}
+
+.text {
+    font-size: 2rem;
+}
+.fp {
+    display: flex;
+    justify-content: space-around;
+    margin: 300px 0;
+    height:600px;
+}
+.leftp {
+    font-size: 2rem;
+    color: rgb(246, 138, 14);
+    margin: -240px;
+    padding-right: 190px;
+    position: absolute;
+}
+.rightp img{
+    margin: -200px;
+    height: 680px;
+    width: 1145px;
+    padding-left: 2rem;
+    position: absolute;
+}
+.booking-form {
+    width: 400px;
+    padding: 20px;
+    margin: 300px;
+    margin-left: 495px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+h2 {
+    text-align: center;
+    color: rgb(112, 58, 0);
+    font-weight: bolder;
+    font-size: 50px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent inputs */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+input::placeholder {
+    color: #888;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e6a80b;
+}
