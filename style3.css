@@ -4,9 +4,7 @@ body {
     color: rgb(20, 106, 152);
     font-family: "Sevillana", cursive;
     font-weight: 800;
-    background-image: url(joyrides.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 30px;
 
 }
 
@@ -46,7 +44,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     margin: 300px 0;
-    height:600px;
+    height:900px;
 }
 .leftp {
     font-size: 2rem;
@@ -62,3 +60,87 @@ nav ul li a:hover {
     padding-left: 2rem;
     position: absolute;
 }
+.ride-card {
+    margin: 20px 0;
+  }
+/* Container for all rides */
+.ride-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+
+  /* Card for each ride */
+  .ride-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hover effect on the card */
+  .ride-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Ride image */
+  .ride-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Ride name */
+  .ride-card h3 {
+    margin: 15px 0;
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+  }
+
+  /* Description text */
+  .ride-card p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Booking link button */
+  .ride-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fbc531;
+    color: #333;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  /* Button hover effect */
+  .ride-card a:hover {
+    background-color: #e1b12c;
+  }
+
+  /* Heading */
+  .header {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Transparent Footer */
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+  }

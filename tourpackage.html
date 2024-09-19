@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ore Grihobashi</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="pic"><img src="home2.jpg" height="90"></div>
+            <div class="text">Ore Grihobashi</div>
+            <div class="topright">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="joyrides.html">Joy Rides</a></li>
+                    <li><a href="tourpackage.html">Tour Package</a></li>
+                    <li><a href="bengal.html">Bengal</a></li>
+                    <li><a href="/">Timings</a></li>
+                    <li><a href="/">Help</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="dialog-box">
+            <div class="dialog-header">
+                <h2>Select Your Journey</h2>
+            </div>
+            <div class="dialog-content">
+                <label for="district">Choose a District:</label>
+                <select id="district" name="district">
+                    <option value="">Select District</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="darjeeling">Darjeeling</option>
+                    <option value="howrah">Howrah</option>
+                    <option value="birbhum">Birbhum</option>
+                </select>
+                <div id="place-selection" class="hidden">
+                    <h3>Choose Places to Visit:</h3>
+                    <label><input type="checkbox" name="place" value="place1"> Place 1</label><br>
+                    <label><input type="checkbox" name="place" value="place2"> Place 2</label><br>
+                    <label><input type="checkbox" name="place" value="place3"> Place 3</label><br>
+                </div>
+                <div id="price-ride" class="hidden">
+                    <h3>Suggested Price: ₹ <span id="suggested-price">1500</span></h3>
+                    <h3>Available Rides:</h3>
+                    <label><input type="radio" name="ride" value="bus"> Bus</label><br>
+                    <label><input type="radio" name="ride" value="car"> Car</label><br>
+                    <label><input type="radio" name="ride" value="bike"> Bike</label><br>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById('district').addEventListener('change', function() {
+                const selectedDistrict = this.value;
+                const placeSelection = document.getElementById('place-selection');
+                const priceRide = document.getElementById('price-ride');
+                
+                if (selectedDistrict !== '') {
+                    placeSelection.classList.remove('hidden');
+                    priceRide.classList.remove('hidden');
+                } else {
+                    placeSelection.classList.add('hidden');
+                    priceRide.classList.add('hidden');
+                }
+            });
+        </script>
+</body>
+</html>

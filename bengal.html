@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengal</title>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="pic"><img src="home2.jpg" height="90"></div>
+            <div class="text">Ore Grihobashi</div>
+            <div class="topright">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="joyrides.html">Joy Rides</a></li>
+                    <li><a href="tourpackage.html">Tour Package</a></li>
+                    <li><a href="bengal.html">Bengal</a></li>
+                    <li><a href="/">Timings</a></li>
+                    <li><a href="/">Help</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="scene">
+        <div class="image-container">
+          <a href="https://en.wikipedia.org/wiki/History_of_Bengal"><img src="bengalmap.jpg" alt="Bonedi Bari"></a>
+        </div>
+        <div class="scroll-prompt">Scroll Down to Explore More ↓</div>
+      </div> 
+      <!-- Timeline (Initially hidden offscreen) -->
+  <ul class="timeline">
+    <li data-section="1">Ancient Bengal</li>
+    <li data-section="2">Medieval Bengal</li>
+    <li data-section="3">Colonial Bengal</li>
+    <li data-section="4">Modern Bengal</li>
+  </ul>
+
+  <!-- History Details (Hidden until clicked) -->
+  <div id="historyDetails" class="history-details">
+    <button class="close-btn">Close</button>
+    <h1 id="historyTitle">History</h1>
+    <p id="historyContent">Content about the historical period...</p>
+  </div>
+
+  <!-- Section 1: Ancient Bengal -->
+  <div class="section section-1">
+    <div>
+      <h1>Ancient Bengal</h1>
+      <p>Discover the early civilizations of Bengal, with the rise of kingdoms such as the Mauryas and Guptas.</p>
+    </div>
+  </div>
+
+  <!-- Section 2: Medieval Bengal -->
+  <div class="section section-2">
+    <div>
+      <h1>Medieval Bengal</h1>
+      <p>The era of the Palas and Senas saw Bengal as a cultural and architectural hub.</p>
+    </div>
+  </div>
+
+  <!-- Section 3: Colonial Bengal -->
+  <div class="section section-3">
+    <div>
+      <h1>Colonial Bengal</h1>
+      <p>Bengal became a British stronghold, while also becoming a cradle of the freedom movement.</p>
+    </div>
+  </div>
+
+  <!-- Section 4: Modern Bengal -->
+  <div class="section section-4">
+    <div>
+      <h1>Modern Bengal</h1>
+      <p>From Rabindranath Tagore to the modern arts, Bengal continues to influence Indian culture.</p>
+    </div>
+  </div>
+
+  <script>
+    // Get all sections and timeline items
+    const sections = document.querySelectorAll('.section');
+    const timeline = document.querySelector('.timeline');
+    const timelineItems = document.querySelectorAll('.timeline li');
+    const historyDetails = document.getElementById('historyDetails');
+    const closeBtn = document.querySelector('.close-btn');
+    const historyTitle = document.getElementById('historyTitle');
+    const historyContent = document.getElementById('historyContent');
+
+    // Scroll-triggered timeline animation
+    function showTimeline() {
+      const scrollPos = window.scrollY;
+
+      if (scrollPos > window.innerHeight / 2) {
+        timeline.classList.add('show');
+      }
+    }
+
+    window.addEventListener('scroll', showTimeline);
+
+    // Click event to show history details
+    timelineItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        const sectionTitle = sections[index].querySelector('h1').innerText;
+        const sectionContent = sections[index].querySelector('p').innerText;
+
+        // Populate and show history details
+        historyTitle.innerText = sectionTitle;
+        historyContent.innerText = sectionContent;
+        historyDetails.classList.add('show');
+      });
+    });
+
+    // Close history details
+    closeBtn.addEventListener('click', () => {
+      historyDetails.classList.remove('show');
+    });
+
+  </script>
+</body>
+</html>

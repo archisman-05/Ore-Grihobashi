@@ -1,0 +1,229 @@
+*{
+    max-width: 1600px;
+}
+body {
+    background-color: rgb(237, 152, 14);
+    font-family: Handjet, sans-serif;
+    color: rgb(20, 106, 152);
+    font-family: "Sevillana", cursive;
+    font-weight: 800;
+    background-image: url(Plassey.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: yellow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(20, 106, 152);
+}
+
+nav ul li a:hover {
+    color: rgb(239, 165, 6);
+    font-size: 1.01rem;
+
+}
+
+.text {
+    font-size: 2rem;
+}
+.fp {
+    display: flex;
+    justify-content: space-around;
+    margin: 300px 0;
+    height:600px;
+}
+.leftp {
+    font-size: 2rem;
+    color: rgb(246, 138, 14);
+    margin: -240px;
+    padding-right: 190px;
+    position: absolute;
+}
+.rightp img{
+    margin: -200px;
+    height: 680px;
+    width: 1145px;
+    padding-left: 2rem;
+    position: absolute;
+}
+.scene {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+.image-container {
+    width: 640px;
+    height: 480px;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  /* Image Styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+  }
+
+  /* Hover Interaction */
+  .image-container:hover {
+    transform: scale(1.05) rotateY(15deg) rotateX(10deg);
+  }
+
+  /* Text Description */
+  .description {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 3;
+  }
+
+  /* Footer with Scroll Prompt */
+  .scroll-prompt {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #fff;
+    animation: bounce 2s infinite;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    50% {
+      transform: translateY(-10px) translateX(-50%);
+    }
+  }
+/* Common Section Styles */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px;
+    overflow: hidden;
+    background: #f7f0d4;
+    transition: all 1s ease;
+  }
+
+  .section h1 {
+    font-size: 3rem;
+    z-index: 5;
+    color: #333;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .section p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    color: #555;
+    text-align: center;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+
+  /* Scroll-Triggered Timeline */
+  .timeline {
+    position: fixed;
+    top: 50%;
+    left: -200px; /* Start off-screen */
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    list-style: none;
+    z-index: 10;
+    color: #444;
+    transition: left 1s ease;
+  }
+
+  .timeline.show {
+    left: 30px; /* Slide in on scroll */
+  }
+
+  .timeline li {
+    margin-bottom: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .timeline li.active {
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .timeline li:hover {
+    color: #333;
+  }
+
+  /* History Details (Initially Hidden) */
+  .history-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 20;
+  }
+
+  .history-details.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  /* Close Button for History Details */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff5e5e;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+  }

@@ -1,0 +1,177 @@
+body {
+    background-color: rgb(237, 152, 14);
+    font-family: Handjet, sans-serif;
+    color: rgb(20, 106, 152);
+    font-family: "Sevillana", cursive;
+    font-weight: 800;
+    background-image: url(about3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: yellow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(20, 106, 152);
+}
+
+nav ul li a:hover {
+    color: rgb(239, 165, 6);
+    font-size: 1.01rem;
+
+}
+
+.text {
+    font-size: 2rem;
+}
+.fp {
+    display: flex;
+    justify-content: space-around;
+    margin: 300px 0;
+    height:600px;
+}
+.leftp {
+    font-size: 2rem;
+    color: rgb(246, 138, 14);
+    margin: -240px;
+    padding-right: 190px;
+    position: absolute;
+}
+.rightp img{
+    margin: -200px;
+    height: 680px;
+    width: 1145px;
+    padding-left: 2rem;
+    position: absolute;
+}
+
+.container {
+    max-width: 1200px;  /* Set the maximum width */
+    width: 100%;  /* Ensure the container is responsive */
+    padding: 0 20px;  /* Add padding for smaller screens */
+    box-sizing: border-box;
+}
+.top{
+    text-align: center;
+    margin-left: 107px;
+    margin-top: 30px;
+    margin-bottom: -120px;
+}
+.about-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    padding: 50px;
+    margin-left: 97px;
+    opacity: 1; /* Ensure it's visible by default */
+    transform: translateY(0); /* No initial movement */
+    transition: all 1s ease;
+    height: 510px;
+}
+
+.about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement */
+}
+
+.about-section:hover {
+    background-color: #ffff00;
+    transition: background-color 0.5s ease;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.team-section {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-left: 57px;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 38px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.member {
+    background-color: #ffe100;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-left: 77px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.member h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.member a img {
+    width: 30px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

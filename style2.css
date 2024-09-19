@@ -4,7 +4,7 @@ body {
     color: rgb(20, 106, 152);
     font-family: "Sevillana", cursive;
     font-weight: 800;
-    background-image: url(bookings.jpg);
+    background-image: url(bookings1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -81,14 +81,15 @@ input, select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent inputs */
+    background-color: rgba(1, 170, 226, 0.5); /* Semi-transparent inputs */
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    color: #333;
+    color: #3c00ff;
+    font-weight: bold;
 }
 input::placeholder {
-    color: #888;
+    color: #260ddc;
 }
 button {
     width: 100%;
