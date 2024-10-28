@@ -4,10 +4,10 @@ body {
     color: rgb(20, 106, 152);
     font-family: "Sevillana", cursive;
     font-weight: 800;
-    background-image: url(rosogolla.jpg);
+    background-image: url(tram.webp);
     background-size: 100%;
     background-repeat: no-repeat;
-
+    height: 1400px;
 }
 
 nav {
@@ -68,7 +68,7 @@ nav ul li a:hover {
     border-radius: 10px;
     padding: 20px;
     margin-left: 525px;
-    margin-top: 180px;
+    margin-top: 480px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
